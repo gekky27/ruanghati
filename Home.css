@@ -1,0 +1,169 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-container {
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  position: relative;
+  overflow-x: hidden; /* Prevent side scrolling on mobile */
+}
+
+/* LOGO STRATEGY */
+.logo-absolute {
+  position: absolute;
+  top: 15px;
+  left: 20px; /* Reduced for mobile */
+  z-index: 20;
+}
+
+.logo-image {
+  height: 80px; /* Smaller default for mobile */
+  width: auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* NAVBAR STRATEGY */
+.navbar-wrapper {
+  position: fixed; /* Fixed so it stays while scrolling */
+  top: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 30;
+  padding: 0 10px;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 10px 25px;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Smaller gap for mobile */
+  white-space: nowrap;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* HERO SECTION */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px 40px 20px; /* Extra top padding for navbar/logo */
+  position: relative;
+}
+
+/* BUNDARAN HIJAU GELAP */
+.blur-circle {
+  position: absolute;
+  width: 300px; /* Smaller for mobile */
+  height: 300px;
+  background: #606f50; 
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.95;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* TEXT LAYOUT - COLUMN ON MOBILE, ROW ON DESKTOP */
+.hero-content {
+  display: flex;
+  flex-direction: column; /* Stack vertically on mobile */
+  gap: 30px;
+  width: 100%;
+  max-width: 1250px;
+  z-index: 2;
+  text-align: center; /* Center text on mobile */
+}
+
+.hero-text {
+  font-size: 42px; /* Adjusted for mobile */
+  color: #ffffff;
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text em {
+  font-style: italic;
+  font-family: serif; 
+}
+
+/* DESKTOP STYLES (Laptops and up) */
+@media (min-width: 1024px) {
+  .logo-absolute {
+    left: 50px;
+    top: 15px;
+  }
+
+  .logo-image {
+    height: 180px; /* Large logo back for desktop */
+  }
+
+  .navbar {
+    padding: 12px 45px;
+  }
+
+  .nav-links {
+    gap: 40px;
+  }
+
+  .nav-links li {
+    font-size: 15px;
+  }
+
+  .hero-content {
+    flex-direction: row; /* Side by side on desktop */
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .hero-text {
+    font-size: 82px;
+    max-width: 45%; /* Limits width so text wraps nicely */
+  }
+
+  .blur-circle {
+    width: 650px;
+    height: 650px;
+    filter: blur(100px);
+  }
+}
+
+/* TABLET STYLES */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-text {
+    font-size: 60px;
+  }
+  
+  .logo-image {
+    height: 120px;
+  }
+
+  .blur-circle {
+    width: 450px;
+    height: 450px;
+  }
+}
