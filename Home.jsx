@@ -1,27 +1,28 @@
 import React from "react";
 import "../style/Home.css";
+import { Link } from "react-router-dom";
 import logo from "../logo.png"; 
 
 const Home = () => {
   return (
     <div className="home-container">
-      {/* Logo placed separately to allow absolute positioning across screen sizes */}
-      <div className="logo-absolute">
-        <img src={logo} alt="Ruang Hati Logo" className="logo-image" />
-      </div>
+      <div className="header">
+        <div className="logo-container">
+            <img src={logo} alt="Ruang Hati Logo" className="logo-image" />
+        </div>
 
-      {/* Navbar Wrapper for centering */}
-      <div className="navbar-wrapper">
-        <nav className="navbar">
-          <ul className="nav-links">
-            <li className="active">Home</li>
-            <li>Daily Check-in</li>
-            <li>Jeda Dulu</li>
-            <li>AI chatbot</li>
-            <li>Get Help</li>
-          </ul>
-        </nav>
-      </div>
+        <div className="navbar-wrapper">
+            <nav className="navbar">
+            <ul className="nav-links">
+                <li className="active"><Link to="/home">Home</Link></li>
+                <li><Link to="/daily-checkin">Daily Check-in</Link></li>
+                <li ><Link to="/jeda-dulu">Jeda Dulu</Link></li>
+                <li><Link to="/ai-chatbot">AI chatbot</Link></li>
+                <li><Link to="/get-help">Get Help</Link></li>
+            </ul>
+            </nav>
+        </div>
+        </div>
 
       {/* Main Content */}
       <main className="hero">

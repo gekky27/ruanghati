@@ -13,13 +13,6 @@
   overflow-x: hidden; /* Prevent side scrolling on mobile */
 }
 
-/* LOGO STRATEGY */
-.logo-absolute {
-  position: absolute;
-  top: 15px;
-  left: 20px; /* Reduced for mobile */
-  z-index: 20;
-}
 
 .logo-image {
   height: 80px; /* Smaller default for mobile */
@@ -59,6 +52,13 @@
   font-size: 13px;
   font-weight: 500;
   color: #333;
+}
+
+.nav-links a {
+  text-decoration: none; /* Removes underline */
+  color: inherit;        /* Keeps the text color the same as your <li> */
+  display: inline-block;
+  width: 100%;
 }
 
 /* HERO SECTION */
@@ -109,6 +109,32 @@
 .hero-text em {
   font-style: italic;
   font-family: serif; 
+}
+
+/* HEADER (same as Jeda Dulu) */
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  z-index: 50;
+}
+
+/* LOGO aligned like Jeda Dulu */
+.logo-container {
+  position: absolute;
+  left: 50px;
+  top: 80%;
+  transform: translateY(-40%);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo-image {
+  width: 125px;
+  height: 200px;
 }
 
 /* DESKTOP STYLES (Laptops and up) */
