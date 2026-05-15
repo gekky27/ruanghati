@@ -1,0 +1,288 @@
+/* ===== PAGE ===== */
+.admin-ai-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding: 30px 50px 80px;
+  position: relative;
+  overflow-x: hidden;
+
+  /* ADD THIS */
+  font-family: "Poppins", sans-serif;
+}
+  
+  /* ===== BLUR BACKGROUND ===== */
+  .admin-ai-page::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(173, 216, 230, 0.35);
+    filter: blur(120px);
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  .admin-ai-page *,
+  .admin-ai-page input,
+  .admin-ai-page textarea,
+  .admin-ai-page button {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* ===== NAVBAR ===== */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 45px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #1d1d1d;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    opacity: 0.7;
+  }
+  
+  .nav-links .active a {
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  /* LOGO */
+.logo-container-ai {
+    position: absolute;
+    left: 0px;
+    top: 55%;
+    transform: translateY(-40%);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .logo-image-ai {
+    width: 120px;
+  }
+  
+  /* ===== LOGOUT ===== */
+  
+  .logout-btn-ai {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+  
+    background: transparent;
+    border: none;
+    color: #8b5d74;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .logout-btn:hover {
+    opacity: 0.7;
+  }
+  
+  /* ===== TITLE ===== */
+  .admin-ai-title {
+    text-align: center;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 70px;
+    position: relative;
+    z-index: 2;
+    line-height: 1.1;
+  }
+  
+  /* ===== GRID ===== */
+  .admin-ai-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* ===== CARD ===== */
+  .admin-ai-card {
+    background: rgba(255,255,255,0.45);
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 30px;
+    padding: 35px;
+    backdrop-filter: blur(10px);
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* ===== TITLE ===== */
+  .admin-ai-card-title {
+    font-size: 34px;
+    margin-bottom: 25px;
+    color: #111;
+    font-weight: 500;
+  }
+  
+  .admin-ai-title-input {
+    border: none;
+    background: transparent;
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    outline: none;
+    width: 100%;
+    color: #111;
+  }
+  
+  /* ===== CONTENT ===== */
+  .admin-ai-content {
+    white-space: pre-line;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #333;
+    flex: 1;
+    font-weight: 400;
+  }
+  
+  .admin-ai-textarea {
+    flex: 1;
+    border: none;
+    resize: none;
+    background: transparent;
+    font-size: 17px;
+    line-height: 1.8;
+    outline: none;
+    color: #333;
+  }
+  
+  /* ===== BUTTONS ===== */
+  .admin-ai-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  /* ===== BUTTON ===== */
+  .admin-ai-edit-btn,
+  .admin-ai-save-btn,
+  .admin-ai-delete-btn {
+    border: none;
+    border-radius: 30px;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .admin-ai-edit-btn {
+    background: white;
+    border: 1px solid #ccc;
+    color: #2f4f4f;
+  }
+  
+  .admin-ai-save-btn {
+    background: #2f4f4f;
+    color: white;
+  }
+  
+  .admin-ai-delete-btn {
+    background: #f46d6d;
+    color: white;
+  }
+  
+  .admin-ai-edit-btn:hover,
+  .admin-ai-save-btn:hover,
+  .admin-ai-delete-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+  }
+  
+  /* ===== ADD BUTTON ===== */
+  .admin-ai-add-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .admin-ai-add-btn {
+    border: none;
+    background: #2f4f4f;
+    color: white;
+    padding: 16px 38px;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .admin-ai-add-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1000px) {
+  
+    .admin-ai-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .admin-ai-title {
+      font-size: 55px;
+    }
+  
+    .admin-ai-header {
+      flex-direction: column;
+      gap: 25px;
+    }
+  
+    .admin-ai-nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  
+  }
+
+  .admin-ai-notif {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(47, 79, 79, 0.95);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 30px;
+    font-size: 16px;
+    z-index: 9999;
+    animation: fadeInOut 2.5s ease;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translate(-50%, -10px); }
+    10% { opacity: 1; transform: translate(-50%, 0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translate(-50%, -10px); }
+  }

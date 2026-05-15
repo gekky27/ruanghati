@@ -1,0 +1,237 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .gethelp-container {
+    min-height: 100vh;
+    /* Soft gradient background matching image 1.jpg */
+    background: linear-gradient(180deg, #f5f0f0 0%, #ffe1ce 100%);
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  .logo-container {
+    position: absolute;
+    left: 50px;
+    top: 100%;                 /* move to vertical center */
+    transform: translateY(-40%); /* 🔥 perfect vertical alignment */
+    display: flex;
+    align-items: center;
+
+    z-index: 1000; 
+  }
+  
+  .logo-image {
+    width: 125px;
+    height: 200px;
+  }
+  
+  /* NAVBAR STRATEGY - SHARED WITH HOME */
+  .navbar-wrapper {
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 30;
+    padding: 0 10px;
+  }
+  
+  .navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 10px 25px;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .nav-links li.active a {
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  
+  /* MAIN CONTENT ADJUSTMENT */
+  .gethelp-main-content {
+    padding: 220px 20px 60px 20px; /* Top padding ensures content starts below large desktop logo */
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  
+  /* HERO SECTION */
+  .gethelp-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+  
+  .hero-main-text {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #333;
+  }
+  
+  .hero-side-text {
+    text-align: right;
+  }
+  
+  .hero-side-text h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+  }
+  
+  .not-alone {
+    font-size: 48px !important;
+  }
+  
+  /* CARDS */
+  .cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Spacing between the two big cards */
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .help-card {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1.5px solid #e8e8e8; /* Subtle border like image */
+    border-radius: 45px; /* Very rounded corners */
+    padding: 60px 40px;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 50px; /* Space between title and grid */
+  }
+  
+  .underline {
+    display: inline-block;
+    border-bottom: 1.5px solid #333;
+    padding-bottom: 3px;
+  }
+  
+  /* GRID FOR HOTLINES */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    column-gap: 80px; /* Wide horizontal spacing */
+    row-gap: 45px;    /* Vertical spacing between hotline items */
+    text-align: left; /* Text inside grid is left-aligned */
+    width: fit-content;
+    margin: 0 auto;   /* Centers the grid within the card */
+  }
+  
+  .contact-item strong {
+    display: block;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 6px;
+  }
+  
+  .contact-item p {
+    font-size: 14.5px;
+    color: #444;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  /* LIST FOR PROFESSIONALS */
+  .pro-list {
+    display: flex;
+    flex-direction: column;
+    gap: 35px; /* Spacing between psychologist entries */
+    text-align: center;
+  }
+
+  .pro-item strong {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 4px;
+  }
+  
+  /* FOOTER */
+  .gethelp-footer {
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .gethelp-footer p {
+    font-size: 11px;
+    color: #888;
+    line-height: 1.6;
+  }
+  
+  /* DESKTOP STYLES (Match Home.css Media Queries) */
+  @media (min-width: 1024px) {
+    .logo-absolute {
+      left: 50px;
+      top: 15px;
+    }
+  
+    .logo-image {
+      height: 180px; /* Large desktop logo */
+    }
+  
+    .navbar {
+      padding: 12px 45px;
+    }
+  
+    .nav-links {
+      gap: 40px;
+    }
+  
+    .nav-links li a {
+      font-size: 15px;
+    }
+  
+    .gethelp-hero {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  
+    .hero-main-text {
+      font-size: 52px;
+    }
+  
+    .hero-side-text h2 {
+      font-size: 62px;
+    }
+  
+    .not-alone {
+      font-size: 82px !important;
+    }
+  
+    .card-grid {
+      grid-template-columns: 1fr 1fr; /* 2 columns on desktop */
+    }
+  
+    .help-card {
+      padding: 60px;
+    }
+  }

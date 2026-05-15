@@ -1,0 +1,322 @@
+.admin-container {
+    min-height: 100vh;
+    background: #fefefe;
+    font-family: "Poppins", sans-serif;
+  }
+
+  /* ===== AURA BACKGROUND ===== */
+  .admin-container {
+    min-height: 100vh;
+  
+    background-image: url("../bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  
+    font-family: "Poppins", sans-serif;
+  
+    position: relative;
+    overflow-x: hidden;
+  
+    padding-bottom: 80px;
+  }
+.header,
+.article-section,
+.affirmation-section,
+.music-section {
+  position: relative;
+  z-index: 2;
+}
+
+.affirmation-section h2,
+.music-section h2 {
+  font-size: 60px;
+  font-style: italic;
+  line-height: 1.1;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+/* HEADER (same as Jeda Dulu) */
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  z-index: 10;
+}
+
+/* LOGO */
+.logo-container {
+  position: absolute;
+  left: 50px;
+  top: 80%;
+  transform: translateY(-40%);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo-image {
+  width: 120px;
+}
+
+/*new*/
+/* ===== LOGOUT ===== */
+.logout-btn {
+  position: absolute;
+  right: 50px;
+  top: 80%;
+  transform: translateY(-50%);
+
+  background: transparent;
+  border: none;
+  color: #8b5d74;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  opacity: 0.7;
+}
+
+
+.admin-item {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.delete-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #c08497;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.upload-btn {
+  padding: 14px 28px;
+  border-radius: 16px;
+  border: none;
+  background: #2f4f4f;
+  color: white; /* ADD THIS */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.upload-btn:hover {
+  background: #3b6666; /* optional nicer hover */
+  transform: translateY(-2px);
+}
+
+.upload-btn:focus,
+.upload-btn:active {
+  background: #2f4f4f;
+  color: white;
+}
+
+.upload-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.article-card-wrapper {
+  position: relative;
+}
+
+.article-card img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.article-editor {
+  width: 100%;
+  min-height: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  border: none;
+  background: white;
+  font-size: 16px;
+  line-height: 1.7;
+  resize: vertical;
+}
+
+.popup-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  z-index: 1000;
+}
+
+
+/* DARK BACKGROUND */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* MODAL BOX */
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* INPUTS */
+.modal input,
+.modal textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* BUTTON ROW */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* BUTTONS */
+.submit-btn {
+  background: #2f4f4f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.cancel-btn {
+  background: #ddd;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.article-grid,
+.affirmation-cards,
+.music-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+
+.music-wrapper,
+.affirmation-wrapper {
+  position: relative;
+}
+
+.music-wrapper img,
+.affirmation-wrapper img {
+  width: 250px;
+  border-radius: 20px;
+}
+
+.manage-title {
+  font-size: 60px;
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  font-weight: 300;
+}
+
+
+/* ===== WARNING POPUP ===== */
+
+.warning-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.warning-popup {
+  width: 620px;
+  height: 140px;
+
+  background: #efe4dc;
+
+  border: 1.5px solid black;
+  border-radius: 38px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.warning-icon {
+  width: 62px;
+  margin-bottom: 8px;
+}
+
+.warning-popup p {
+  font-size: 22px;
+  font-weight: 400;
+  color: black;
+  margin: 0;
+}
+
+@keyframes popupFade {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+button.upload-btn {
+  background: #2f4f4f !important;
+  color: white !important;
+  border: none !important;
+}
+
+button.upload-btn:hover {
+  background: #3b6666 !important;
+}
