@@ -1,0 +1,184 @@
+.admin-checkin-page {
+  min-height: 100vh;
+  background: #fdfaf7;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* APPLY FONT EVERYWHERE */
+.admin-checkin-page *,
+.admin-checkin-page input,
+.admin-checkin-page button,
+.admin-checkin-page textarea,
+.admin-checkin-page table {
+  font-family: "Poppins", sans-serif;
+}
+  
+  /* Container */
+  .admin-checkin-container {
+    width: 60%;
+    margin: 120px auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Title */
+  .admin-checkin-container h1 {
+    text-align: center;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    color: #111;
+  }
+  
+  /* Question List */
+  .question-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Each Question */
+  .question-item {
+    display: flex;
+    gap: 15px;
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+  
+  .question-item input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    font-weight: 400;
+    color: #222;
+  }
+  
+  /* ===== DELETE BUTTON FIX ===== */
+.question-item .delete-btn {
+  position: static;
+  top: unset;
+  right: unset;
+
+  background: #f87171;
+  color: white;
+  border: none;
+  padding: 3px 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  
+  /* Add Section */
+  .add-section {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .add-section input {
+    flex: 1;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px solid #ccc;
+  
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .add-section button {
+    background: #f9c5d1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .blur-shape {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #fbcfe8, #c7d2fe);
+    filter: blur(120px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+
+  .stats-section {
+    margin-top: 50px;
+  }
+  
+  .stats-section h2 {
+    margin-bottom: 20px;
+  
+    font-size: 42px;
+    font-style: italic;
+    font-weight: 300;
+    color: #111;
+  }
+  
+  .stats-table {
+    width: 100%;
+    max-width: 500px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .stats-table th,
+  .stats-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .stats-table th {
+    background: #f5f5f5;
+    font-weight: 600;
+  }
+  
+  .stats-table tr:hover {
+    background: #fafafa;
+  }
+
+  /* HEADER (same as Jeda Dulu) */
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  z-index: 10;
+}
+
+/* LOGO */
+.logo-container {
+  position: absolute;
+  left: 50px;
+  top: 80%;
+  transform: translateY(-40%);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo-image {
+  width: 120px;
+}
+
+ 

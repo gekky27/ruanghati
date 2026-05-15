@@ -4,9 +4,16 @@
   }
   
   /* HERO */
+  .jeda-hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 0 20px; /* space left & right */
+    box-sizing: border-box;
+  }
   
-  
-  .hero h1 {
+  .jeda-hero h1 {
     font-size: 60px;
     margin: 10px 0;
   }
@@ -68,8 +75,9 @@
   
   /* ACTIVITIES */
   .activities {
-    text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
   }
   
   .activities h1 {
@@ -103,6 +111,82 @@
   .activity-text {
     margin-top: 20px;
   }
+
+  /* CARD CONTAINER */
+.breath-card {
+    position: relative;
+    width: 80%;
+    max-width: 700px; /* 🔥 makes it smaller */
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  /* IMAGE */
+  .breath-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 30px;
+  }
+  
+  
+  /* TEXT */
+
+  .breath-text {
+    display: flex;
+    flex-direction: column;   /* 🔥 forces 2 lines */
+    font-size: 48px;
+    font-style: italic;
+    color: #1a1a1a;
+    line-height: 1.2;
+  }
+
+  .breath-text span {
+    display: block;           /* 🔥 each on its own line */
+  }
+
+  .breath-overlay {
+    position: absolute;   /* 🔥 THIS IS THE KEY FIX */
+    bottom: 450px;        /* adjust vertically */
+    left: 400px;           /* adjust horizontally */
+  }
+  
+  /* BUTTON ON IMAGE */
+  .start-jeda-btn {
+    position: absolute;
+    bottom: 200px;
+    left: 100px;
+  
+    display: flex;              /* 🔥 key */
+    flex-direction: column;     /* stack text */
+    align-items: center;
+    justify-content: center;
+  
+    padding: 16px 65px;         /* slightly taller */
+    gap: 2px;                   /* space between lines */
+  
+    border: none;
+    border-radius: 30px;
+    background: #2f4f4f;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+  }
+  
+  .start-jeda-btn span {
+    line-height: 1.2;
+  }
+
+  
+  
+  .start-jeda-btn:hover {
+    transform: scale(1.05);
+    background: #3b6666;
+  }
+
+
   
   /* WEEKLY READ */
   .weekly-read {
@@ -183,7 +267,9 @@
 
   .hero-image {
     width: 100%;
+    max-width: 1150px; /* prevents image from becoming too wide */
     border-radius: 30px;
+    display: block;
   }
   
   .pintu-image {
@@ -192,4 +278,7 @@
     margin-right: 50px;
   }
 
+
+  
+  
   

@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import "../style/Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import blueBg from "../blue.png";
+import bellIcon from "../1.jpg";
 
 const Login = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ name: "", password: "" });
   const [errorMessage, setErrorMessage] = useState("");
+  const [showGuestPopup, setShowGuestPopup] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -15,6 +17,15 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMessage("");
+
+
+    // ✅ ADMIN LOGIN (HARDCODED)
+    if (formData.name === "admin" && formData.password === "admin") {
+      localStorage.setItem("role", "admin"); // store role
+      navigate("/admin"); // redirect to admin page
+      return;
+    }
+
     try {
       const response = await fetch("/api/auth/login", {
         method: "POST",
@@ -32,6 +43,12 @@ const Login = () => {
       setErrorMessage("Server not reachable. Please try again later.");
     }
   };
+    // ===== GUEST MODE =====
+    const handleGuestMode = () => {
+      localStorage.setItem("guestMode", "true");
+      navigate("/home");
+    };
+  
 
   return (
     <div className="login-container">
@@ -83,7 +100,63 @@ const Login = () => {
             </div>
 
             <div className="login-actions">
-              <button type="submit" className="floating-btn">Log In</button>
+            <div className="login-buttons">
+
+            <div className="login-buttons">
+
+              <button
+                type="submit"
+                className="floating-btn"
+              >
+                Log In
+              </button>
+
+              <div className="guest-btn-wrapper">
+
+                <button
+                  type="button"
+                  className="guest-btn"
+                  onClick={handleGuestMode}
+                >
+                  Continue as Guest
+                </button>
+
+                <button
+                  type="button"
+                  className="bell-btn"
+                  onClick={() => setShowGuestPopup(true)}
+                >
+                  <img src={bellIcon} alt="bell" />
+                </button>
+
+              </div>
+              {showGuestPopup && (
+                <div
+                  className="guest-popup-overlay"
+                  onClick={() => setShowGuestPopup(false)}
+                >
+                  <div className="guest-popup">
+                    <h3 className="guest-popup-title">Privacy Notice & User Agreement</h3>
+
+                    <p className="guest-popup-text">
+                      By creating an account in <strong>Ruang Hati</strong>, you agree that
+                      your personal data and activity within the platform, including your
+                      journaling entries, may be collected, stored, and securely managed in the
+                      Ruang Hati database to support platform features and improve user
+                      experience.
+                    </p>
+
+                    <p className="guest-popup-text">
+                      Your information will be handled with care and used in accordance with the
+                      Ruang Hati Privacy Policy. By continuing to register, you acknowledge and
+                      agree to these terms and conditions.
+                    </p>
+                  </div>
+                </div>
+              )}
+              </div>
+
+              </div>
               <div className="switch-text">
                 Don’t have an account? <a href="/signup">Sign Up</a>
               </div>

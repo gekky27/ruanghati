@@ -1,0 +1,383 @@
+.admin-jeda-container {
+    min-height: 100vh;
+    background: #fefefe;
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 80px;
+  }
+  
+  /* ================= HEADER ================= */
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    z-index: 10;
+  }
+  
+  /* LOGO */
+  .logo-container {
+    position: absolute;
+    left: 50px;
+    top: 80%;
+    transform: translateY(-40%);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .logo-image {
+    width: 120px;
+  }
+  
+  /* NAVBAR */
+  
+  
+  .navbar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar .nav-links li a {
+    text-decoration: none;
+    color: #444;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  
+  .navbar .nav-links li a:hover {
+    color: #253291;
+  }
+  
+  .navbar .nav-links .active a {
+    color: #253291;
+    font-weight: 600;
+  }
+
+
+  .admin-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .admin-card {
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+  }
+  
+  .admin-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* IMAGE */
+  .admin-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+  
+  /* TITLE */
+  .admin-card p {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #222;
+  }
+  
+  /* DELETE BUTTON */
+  .admin-card .delete-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+  
+    background: #c08497;
+    color: white;
+  
+    cursor: pointer;
+    font-size: 16px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    transition: 0.3s ease;
+  }
+  
+  .admin-card .delete-btn:hover {
+    transform: scale(1.08);
+  }
+  
+  /* ================= SECTION TITLES ================= */
+  
+  .admin-section h2 {
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    margin-bottom: 60px;
+    margin-top: 40px;
+    color: #2f2f2f;
+  }
+  
+  /* ================= SECTION ================= */
+  .admin-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+  }
+  
+  .admin-title {
+    font-size: 38px;
+    margin-bottom: 35px;
+    color: #2f2f2f;
+    text-align: center;
+  }
+  
+
+ 
+  
+  /* ================= WEEKLY READ ================= */
+
+  
+  .read-card-admin img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+  
+  
+  /* ================= BUTTONS ================= */
+  .admin-btn-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+  }
+  
+  .edit-btn {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 14px;
+    background: #000000;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  
+  .edit-btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .delete-btn {
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #f06a6a;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  
+  .delete-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ================= ADD BUTTON ================= */
+  .upload-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+  }
+  
+  .upload-btn {
+    border: none;
+    background: #b0aeb9;
+    color: #000000;
+    padding: 14px 28px;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .upload-btn:hover {
+    background: #b2aebc;
+  }
+
+  .admin-video-player {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 18px;
+    background: rgb(255, 255, 255);
+    display: block;
+  }
+
+  .article-card {
+    overflow: hidden;
+    border-radius: 18px;
+  }
+  
+  /* ================= MODAL ================= */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal {
+    width: 500px;
+    background: white;
+    border-radius: 28px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .modal h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .modal input,
+  .modal textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    padding: 14px;
+    font-family: inherit;
+    font-size: 15px;
+  }
+  
+  .modal textarea {
+    min-height: 160px;
+    resize: vertical;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .submit-btn {
+    border: none;
+    background: #000000;
+    color: white;
+    padding: 12px 26px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  .cancel-btn {
+    border: none;
+    background: #e9e9e9;
+    color: #444;
+    padding: 12px 26px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  /* ================= RESPONSIVE ================= */
+  @media (max-width: 768px) {
+    .navbar-wrapper {
+      width: 90%;
+      overflow-x: auto;
+    }
+  
+    .navbar .nav-links {
+      gap: 20px;
+    }
+  
+    .admin-title {
+      font-size: 28px;
+    }
+  
+    .video-card-admin,
+    .read-card-admin {
+      width: 100%;
+    }
+  
+    .modal {
+      width: 90%;
+    }
+  }
+
+  /* ===== WARNING POPUP ===== */
+
+.warning-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.35);
+
+  z-index: 9999;
+}
+
+.warning-popup {
+  width: 620px;
+  height: 140px;
+
+  background: #efe4dc;
+
+  border: 1.5px solid black;
+  border-radius: 38px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.warning-icon {
+  width: 62px;
+  margin-bottom: 8px;
+}
+
+.warning-popup p {
+  font-size: 22px;
+  font-weight: 400;
+  color: black;
+  margin: 0;
+}

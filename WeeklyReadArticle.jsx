@@ -5,15 +5,13 @@ import {
   useParams
 } from "react-router-dom";
 
-function WeeklyRead() {
+function WeeklyReadArticle() {
 
   const navigate = useNavigate();
 
   const { id } = useParams();
 
   const [article, setArticle] = useState(null);
-
-  // ================= FETCH =================
 
   useEffect(() => {
     fetchArticle();
@@ -24,7 +22,7 @@ function WeeklyRead() {
     try {
 
       const res = await fetch(
-        `http://localhost:5050/api/jeda-reads/${id}`
+        `http://localhost:5050/api/articles/${id}`
       );
 
       const data = await res.json();
@@ -36,8 +34,6 @@ function WeeklyRead() {
     }
   };
 
-  // ================= LOADING =================
-
   if (!article) {
     return <h2>Loading...</h2>;
   }
@@ -47,24 +43,20 @@ function WeeklyRead() {
 
       <div className="weekly-content">
 
-        {/* TITLE */}
         <h1 className="article-title">
           {article.title}
         </h1>
 
-        {/* IMAGE */}
         <img
           src={`http://localhost:5050${article.image}`}
           alt={article.title}
           className="article-image"
         />
 
-        {/* CONTENT */}
         <p className="article-text">
           {article.content}
         </p>
 
-        {/* BACK BUTTON */}
         <button
           className="back-btn"
           onClick={() => navigate(-1)}
@@ -78,4 +70,4 @@ function WeeklyRead() {
   );
 }
 
-export default WeeklyRead;
+export default WeeklyReadArticle;
